@@ -1,0 +1,90 @@
+/* ================================================================
+   A GOOD CSS LAYOUT EXAMPLE — Day 2 reference file
+   ================================================================
+   Notice: no bright colors, no fancy fonts here on purpose!
+   Only grays, so you can focus 100% on ARRANGEMENT.
+   Real colors and fonts are Day 3's job.
+   ================================================================ */
+
+/* A little reset so every browser starts from the same blank slate */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #333;
+}
+
+/* ----------------------------------------------------------------
+   HEADER — Flexbox, one direction (a row)
+   ---------------------------------------------------------------- */
+.site-header {
+  display: flex;               /* turn on Flexbox */
+  justify-content: space-between; /* logo left, nav right */
+  align-items: center;         /* vertically centered */
+  padding: 20px 40px;          /* box model: space INSIDE the header */
+  border-bottom: 1px solid #ddd;
+}
+
+.nav-menu {
+  display: flex;   /* Flexbox again, this time to line up the links */
+  gap: 20px;       /* even spacing between links, no extra margin needed */
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* ----------------------------------------------------------------
+   MAIN SECTIONS — just spacing (box model), no layout trick needed
+   ---------------------------------------------------------------- */
+section {
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;   /* centers the section horizontally on the page */
+}
+
+/* ----------------------------------------------------------------
+   PROGRAM CARDS — Grid, two directions (rows AND columns)
+   ---------------------------------------------------------------- */
+.gallery-grid {
+  display: grid;                        /* turn on Grid */
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 20px;                            /* even spacing, row and column */
+  margin-top: 20px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 30px 15px;
+  text-align: center;
+}
+
+/* ----------------------------------------------------------------
+   FORM — a small Flexbox row for the input + button
+   ---------------------------------------------------------------- */
+form {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+input {
+  padding: 8px;
+  flex: 1;   /* let the input stretch to fill the remaining space */
+}
+
+button {
+  padding: 8px 16px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+  color: #777;
+}

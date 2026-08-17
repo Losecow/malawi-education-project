@@ -1,0 +1,96 @@
+/* ================================================================
+   GOOD CSS EXAMPLE — FILL IN THE BLANK VERSION
+   ================================================================
+   Every ______ below is a piece of the layout puzzle. Everything
+   else (spacing, borders, resets) is already done for you — your
+   job is just the ARRANGEMENT: rows, columns, and spacing.
+
+   Word banks are given in each comment. When you're stuck, compare
+   with the finished good-css-example.css.
+   ================================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #333;
+}
+
+/* ----------------------------------------------------------------
+   HEADER — should be a row, logo left, nav right, centered
+   Word bank: flex, space-between, center
+   ---------------------------------------------------------------- */
+.site-header {
+  display: ______;
+  justify-content: ______;
+  align-items: ______;
+  padding: 20px 40px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ----------------------------------------------------------------
+   NAV LINKS — should sit in a row with even spacing
+   Word bank: flex, 20px
+   ---------------------------------------------------------------- */
+.nav-menu {
+  display: ______;
+  gap: ______;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+}
+
+section {
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ----------------------------------------------------------------
+   PROGRAM CARDS — should be 3 equal columns
+   Word bank: grid, repeat(3, 1fr), 20px
+   ---------------------------------------------------------------- */
+.gallery-grid {
+  display: ______;
+  grid-template-columns: ______;
+  gap: ______;
+  margin-top: 20px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 30px 15px;
+  text-align: center;
+}
+
+/* ----------------------------------------------------------------
+   CONTACT FORM — input and button should sit side by side
+   Word bank: flex, 10px, 1
+   ---------------------------------------------------------------- */
+form {
+  display: ______;
+  gap: ______;
+  margin-top: 15px;
+}
+
+input {
+  padding: 8px;
+  flex: ______;   /* let the input stretch to fill the remaining space */
+}
+
+button {
+  padding: 8px 16px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+  color: #777;
+}

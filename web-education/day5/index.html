@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+  ================================================================
+  DAY 5 STARTER TEMPLATE — index.html (Home page)
+  ================================================================
+  This is a real, working multi-page website. Notice the nav
+  links below point to OTHER FILES (about.html, contact.html),
+  not to #sections like before. Try clicking between them once
+  you open this with Live Server!
+
+  Your job: replace the placeholder text with your own content.
+  Everything is already styled — just make it yours.
+  ================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo">MY NAME</div>
+    <button id="menu-toggle">&#9776;</button>
+    <!-- class="active" marks which page we're currently on -->
+    <nav class="nav-menu" id="nav-menu">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Hi, I'm [Your Name]</h1>
+    <p>Write a one-sentence introduction about your site here. Make it <strong>bold and clear</strong> — this is the first thing people read.</p>
+    <a href="about.html" class="btn">Learn more about me &rarr;</a>
+  </section>
+
+  <section class="intro">
+    <h2>What You'll Find Here</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>About Me</h3>
+        <p>A short teaser sentence. Link to your About page for the full story.</p>
+      </div>
+      <div class="card">
+        <h3>My Interests</h3>
+        <p>Replace this with something you care about — a hobby, a project, a goal.</p>
+      </div>
+      <div class="card">
+        <h3>Get in Touch</h3>
+        <p>Tell people the best way to reach you, then link to your Contact page.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery — real images styled with object-fit, plus a Day 4 JS
+       feature: click a photo to highlight it -->
+  <section class="gallery">
+    <h2>Gallery</h2>
+    <p class="section-intro">Click a photo below to see the highlight effect in action.</p>
+    <div class="gallery-grid">
+      <div class="gallery-card">
+        <img src="gallery-1.jpg" alt="Replace with your own photo">
+        <p>Photo 1</p>
+      </div>
+      <div class="gallery-card">
+        <img src="gallery-2.jpg" alt="Replace with your own photo">
+        <p>Photo 2</p>
+      </div>
+      <div class="gallery-card">
+        <img src="gallery-3.jpg" alt="Replace with your own photo">
+        <p>Photo 3</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 My Website. Built during PAF/CGF Website Basics week.</p>
+  </footer>
+
+  <!-- appears once you scroll down (Day 4: scroll + scrollTo) -->
+  <button id="top-btn">&uarr; Top</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

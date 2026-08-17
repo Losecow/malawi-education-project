@@ -1,0 +1,143 @@
+/* ================================================================
+   A GOOD DESIGN EXAMPLE — Day 3 reference file
+   ================================================================
+   Everything here uses plain color names (no hex codes) — that's
+   on purpose, to keep things beginner-friendly. Real projects often
+   use hex codes for exact brand colors, but names work great too.
+   ================================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: black;
+}
+
+/* ----------------------------------------------------------------
+   HEADER — same Flexbox layout as Day 2, just with color now
+   ---------------------------------------------------------------- */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: white;
+  border-bottom: 1px solid lightgray;
+}
+
+.logo {
+  font-weight: 700;
+  color: firebrick;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: black;
+}
+
+/* ----------------------------------------------------------------
+   HERO — Day 3: color, spacing, centered text
+   ---------------------------------------------------------------- */
+.hero {
+  background-color: seashell;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+/* ----------------------------------------------------------------
+   MAIN SECTIONS — spacing only (box model), same as before
+   ---------------------------------------------------------------- */
+section {
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ----------------------------------------------------------------
+   PROGRAM CARDS — Grid layout (Day 2) + styled photos (Day 3)
+   ---------------------------------------------------------------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 2px 2px 8px gray;
+  overflow: hidden; /* keeps the photo's corners inside the rounded card */
+  text-align: center;
+}
+
+.card img {
+  width: 80%;
+  height: 300px;
+  object-fit: fit; /* crops neatly, never stretches */
+}
+
+.card p {
+  padding: 12px;
+  font-weight: 600;
+}
+
+/* ----------------------------------------------------------------
+   FORM — Flexbox row + Day 3 hover effect on the button
+   ---------------------------------------------------------------- */
+form {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+input {
+  padding: 8px;
+  flex: 1;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: firebrick;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s; /* makes the hover change smooth, not instant */
+}
+
+button:hover {
+  background-color: darkred;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid lightgray;
+  color: gray;
+}
+
+/* ----------------------------------------------------------------
+   RESPONSIVE — Day 3: one column on a narrow (phone) screen
+   ---------------------------------------------------------------- */
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}

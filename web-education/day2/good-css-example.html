@@ -1,0 +1,66 @@
+<!doctype html>
+<!--
+  ================================================================
+  A GOOD CSS LAYOUT EXAMPLE — Day 2 reference file
+  ================================================================
+  This is the same page from Day 1, now with a real
+  layout applied using Flexbox and Grid.
+
+  On purpose, everything is still just gray/white/black — no real
+  colors or fonts yet! That's Day 3's job. Today is ONLY about
+  ARRANGEMENT: is it in a row? A grid? Centered? Spaced out?
+  ================================================================
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[Name] | Volunteer Profile</title>
+    <!-- This one line turns our CSS file on -->
+    <link rel="stylesheet" href="good-css-example-fill.css" />
+  </head>
+  <body>
+    <!-- class="site-header" lets our CSS target this specific header -->
+    <header class="site-header">
+      <div class="logo">[Name]</div>
+      <nav class="nav-menu">
+        <a href="#about">About</a>
+        <a href="#programs">Programs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about">
+        <!-- id="hero-title" — a unique name, since there's only ONE of these -->
+        <h1 id="hero-title">Hi, I'm [Name]!</h1>
+        <p>
+          I'm a student from Lilongwe learning to build websites with the
+          PAF/CGF team. Here are the programs I help with.
+        </p>
+      </section>
+
+      <!-- class="gallery-grid" — our Grid container -->
+      <section id="programs">
+        <h2>Programs I Help With</h2>
+        <div class="gallery-grid">
+          <div class="card">Scholarships</div>
+          <div class="card">Bible Study</div>
+          <div class="card">Community Center</div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Get in Touch</h2>
+        <form>
+          <input type="text" placeholder="Your name" />
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 [Name]</p>
+    </footer>
+  </body>
+</html>

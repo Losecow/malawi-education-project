@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Page</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===== Top navigation ===== -->
+    <header class="site-header">
+      <div class="logo">MY NAME</div>
+      <!-- id="menu-toggle" is used by Practice 2 (mobile menu) -->
+      <button id="menu-toggle">&#9776;</button>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- ===== Hero (first screen) section ===== -->
+    <section class="hero">
+      <h1 id="hero-title">Hi, I'm [Your Name]</h1>
+      <p>Write a one-line introduction about yourself here.</p>
+      <!-- id="hello-btn" is used by Practice 1 (click to alert) -->
+      <button id="hello-btn">Click me</button>
+    </section>
+
+    <!-- ===== About section ===== -->
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <p>Write a short paragraph about yourself here (3-5 sentences).</p>
+
+      <!-- id="more-btn" and id="extra-text" are used by Practice 4 -->
+      <button id="more-btn">Read more</button>
+      <p id="extra-text" class="extra-text">
+        Here's some extra text that's hidden until someone clicks "Read more"!
+      </p>
+    </section>
+
+    <!-- ===== Gallery section ===== -->
+    <!-- class="card" on each photo below is used by Practice 3 (highlight on click) -->
+    <section id="gallery" class="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <div class="card">Photo 1</div>
+        <div class="card">Photo 2</div>
+        <div class="card">Photo 3</div>
+      </div>
+    </section>
+
+    <!-- ===== Contact section ===== -->
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>Email: your-email@example.com</p>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+      <p>&copy; 2026 My Page. All rights reserved.</p>
+    </footer>
+
+    <!-- id="top-btn" is used by Practice 5 (back to top) -->
+    <button id="top-btn">&uarr; Top</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>

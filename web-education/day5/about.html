@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+  ================================================================
+  DAY 5 STARTER TEMPLATE — about.html
+  ================================================================
+  Same header, nav, and footer as index.html — copy-pasted on
+  purpose! That's what makes a multi-page site feel like ONE site
+  instead of three random pages.
+
+  Notice class="active" has moved to the "About" link this time.
+  ================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website | About</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo">MY NAME</div>
+    <button id="menu-toggle">&#9776;</button>
+    <nav class="nav-menu" id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="page-header">
+    <h1>About Me</h1>
+  </section>
+
+  <section class="about-content">
+    <p>
+      Write 3-5 sentences about yourself here. Who are you, what are you
+      learning, and what do you care about? This is your chance to tell
+      your story in more detail than the home page. Try using <strong>bold</strong>
+      for something important, or <em>italics</em> for a quote or phrase.
+    </p>
+
+    <h2>A Few Things About Me</h2>
+    <ul>
+      <li>Replace this with something true about you</li>
+      <li>Replace this with a hobby or interest</li>
+      <li>Replace this with a goal or dream</li>
+    </ul>
+
+    <!-- Day 4 JS feature: classList toggle to show/hide extra text -->
+    <button id="more-btn" class="btn-outline">Read more about me</button>
+    <p id="extra-text" class="extra-text">
+      This paragraph is hidden by default. Replace it with a longer story,
+      a favorite memory, or anything else you want to share — it only shows
+      up once someone clicks the button above.
+    </p>
+
+    <a href="contact.html" class="btn">Get in touch &rarr;</a>
+  </section>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 My Website. Built during PAF/CGF Website Basics week.</p>
+  </footer>
+
+  <button id="top-btn">&uarr; Top</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

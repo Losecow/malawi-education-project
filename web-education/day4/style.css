@@ -1,0 +1,289 @@
+/* ================================================================
+   MY PAGE — final styled version (Day 1–4, all filled in)
+   ================================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #2d2d2d;
+  line-height: 1.6;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+section {
+  padding: 90px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ---------------------------------------------------------------
+   HEADER
+   --------------------------------------------------------------- */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: firebrick;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #2d2d2d;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.nav-menu a:hover {
+  color: firebrick;
+}
+
+/* mobile menu button — hidden on desktop */
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #2d2d2d;
+}
+
+@media (max-width: 600px) {
+  #menu-toggle {
+    display: block;
+  }
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    right: 20px;
+    background: white;
+    padding: 16px 24px;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  }
+  .nav-menu.open {
+    display: flex;
+  }
+}
+
+/* ---------------------------------------------------------------
+   HERO
+   --------------------------------------------------------------- */
+.hero {
+  background-color: seashell;
+  text-align: center;
+  padding: 110px 20px;
+}
+
+#hero-title {
+  font-size: 2.6rem;
+  color: firebrick;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  max-width: 480px;
+  margin: 0 auto 28px;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+#hello-btn {
+  background-color: firebrick;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#hello-btn:hover {
+  background-color: darkred;
+  transform: translateY(-2px);
+}
+
+/* ---------------------------------------------------------------
+   ABOUT
+   --------------------------------------------------------------- */
+.about h2 {
+  margin-bottom: 20px;
+  color: firebrick;
+  text-align: center;
+}
+
+.about p {
+  color: #444;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#more-btn {
+  display: block;
+  margin: 0 auto;
+  background: none;
+  border: 2px solid firebrick;
+  color: firebrick;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#more-btn:hover {
+  background-color: firebrick;
+  color: white;
+}
+
+.extra-text {
+  display: none;
+  max-width: 500px;
+  margin: 20px auto 0;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+.extra-text.visible {
+  display: block;
+}
+
+/* ---------------------------------------------------------------
+   GALLERY
+   --------------------------------------------------------------- */
+.gallery {
+  background-color: #fdf3ec;
+}
+
+.gallery h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: firebrick;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  padding: 40px 16px;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card.selected {
+  outline: 3px solid firebrick;
+  outline-offset: 2px;
+}
+
+img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+/* ---------------------------------------------------------------
+   CONTACT
+   --------------------------------------------------------------- */
+.contact {
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 16px;
+  color: firebrick;
+}
+
+.contact p {
+  color: #555;
+}
+
+/* ---------------------------------------------------------------
+   FOOTER
+   --------------------------------------------------------------- */
+.site-footer {
+  background-color: #2d2d2d;
+  color: white;
+  text-align: center;
+  padding: 28px;
+  font-size: 0.9rem;
+}
+
+/* ---------------------------------------------------------------
+   BACK TO TOP BUTTON
+   --------------------------------------------------------------- */
+#top-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 12px 18px;
+  background-color: firebrick;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+#top-btn:hover {
+  background-color: darkred;
+  transform: translateY(-2px);
+}

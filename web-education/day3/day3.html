@@ -1,0 +1,80 @@
+<!doctype html>
+<!--
+  ================================================================
+  A GOOD DESIGN EXAMPLE — Day 3 reference file
+  ================================================================
+  This is the same [Your Name] page from Day 1 and Day 2, now with
+  real color, a real font, styled photos, and a hover effect —
+  everything from today's lesson, all in one file.
+
+  Compare it side by side with good-css-example.html (Day 2,
+  layout only, no color) to see exactly what Day 3 added.
+  ================================================================
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[Your Name] | Volunteer Profile</title>
+
+    <!-- Day 3: connect a Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="day3.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo">[Your Name]</div>
+      <nav class="nav-menu">
+        <a href="#about">About</a>
+        <a href="#programs">Programs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="about">
+        <h1 id="hero-title">Hi, I'm [Your Name]!</h1>
+        <p>
+          I'm a student from Lilongwe learning to build websites with the
+          PAF/CGF team. Here are the programs I help with.
+        </p>
+      </section>
+
+      <section id="programs">
+        <h2>Programs I Help With</h2>
+        <div class="gallery-grid">
+          <div class="card">
+            <!-- Day 3: img is styled with object-fit so it always fills
+               its box neatly, no matter the original photo size -->
+            <img src="scholarship.jpeg" alt="Students studying together" />
+            <p>Scholarships</p>
+          </div>
+          <div class="card">
+            <img src="bible.jpeg" alt="Youth group Bible study circle" />
+            <p>Bible Study</p>
+          </div>
+          <div class="card">
+            <img src="communitycenter.jpeg" alt="Community center building" />
+            <p>Community Center</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Get in Touch</h2>
+        <form>
+          <input type="text" placeholder="Your name" />
+          <!-- Day 3: hover + transition — try hovering this button! -->
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 [Your Name]</p>
+    </footer>
+  </body>
+</html>

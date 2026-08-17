@@ -1,0 +1,417 @@
+/* ================================================================
+   DAY 5 STARTER TEMPLATE — style.css
+   Shared by all 3 pages. Already designed — customize the colors,
+   fonts, and spacing to make it feel like your own!
+   ================================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #2d2d2d;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+a {
+  color: inherit;
+}
+
+/* ---------------------------------------------------------------
+   HEADER + NAV (same on every page)
+   --------------------------------------------------------------- */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: firebrick;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.nav-menu a:hover {
+  color: firebrick;
+}
+
+/* the current page's link */
+.nav-menu a.active {
+  color: firebrick;
+  border-bottom: 2px solid firebrick;
+}
+
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  #menu-toggle {
+    display: block;
+  }
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    right: 20px;
+    background: white;
+    padding: 16px 24px;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  }
+  .nav-menu.open {
+    display: flex;
+  }
+}
+
+/* ---------------------------------------------------------------
+   HERO (index.html)
+   --------------------------------------------------------------- */
+.hero {
+  background-color: seashell;
+  text-align: center;
+  padding: 110px 20px;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  color: firebrick;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  max-width: 480px;
+  margin: 0 auto 28px;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+/* ---------------------------------------------------------------
+   BUTTON LINK (used on several pages)
+   --------------------------------------------------------------- */
+.btn {
+  display: inline-block;
+  background-color: firebrick;
+  color: white;
+  text-decoration: none;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background-color: darkred;
+  transform: translateY(-2px);
+}
+
+/* ---------------------------------------------------------------
+   CARD GRID (index.html "What You'll Find Here")
+   --------------------------------------------------------------- */
+.intro {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 90px 20px;
+  text-align: center;
+}
+
+.intro h2 {
+  color: firebrick;
+  margin-bottom: 40px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  padding: 30px 20px;
+  text-align: left;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+  color: firebrick;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* ---------------------------------------------------------------
+   GALLERY (index.html) — Grid + real photos + Day 4 click-to-highlight
+   --------------------------------------------------------------- */
+.gallery {
+  background-color: #fdf3ec;
+  padding: 90px 20px;
+  text-align: center;
+}
+
+.gallery h2 {
+  color: firebrick;
+}
+
+.section-intro {
+  color: #777;
+  margin: 10px 0 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gallery-card {
+  background-color: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-card p {
+  padding: 12px;
+  font-weight: 600;
+}
+
+.gallery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* added by JS when a photo is clicked */
+.gallery-card.selected {
+  outline: 3px solid firebrick;
+  outline-offset: 2px;
+}
+
+/* ---------------------------------------------------------------
+   "READ MORE" BUTTON + HIDDEN TEXT (about.html) — Day 4 classList
+   --------------------------------------------------------------- */
+.btn-outline {
+  display: inline-block;
+  background: none;
+  border: 2px solid firebrick;
+  color: firebrick;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-family: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-bottom: 20px;
+}
+
+.btn-outline:hover {
+  background-color: firebrick;
+  color: white;
+}
+
+.extra-text {
+  display: none;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+.extra-text.visible {
+  display: block;
+}
+
+/* ---------------------------------------------------------------
+   BACK TO TOP BUTTON (every page) — Day 4 scroll + scrollTo
+   --------------------------------------------------------------- */
+#top-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 12px 18px;
+  background-color: firebrick;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+#top-btn:hover {
+  background-color: darkred;
+  transform: translateY(-2px);
+}
+
+/* ---------------------------------------------------------------
+   PAGE HEADER (about.html / contact.html)
+   --------------------------------------------------------------- */
+.page-header {
+  background-color: seashell;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.page-header h1 {
+  color: firebrick;
+}
+
+/* ---------------------------------------------------------------
+   ABOUT PAGE
+   --------------------------------------------------------------- */
+.about-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 70px 20px;
+}
+
+.about-content h2 {
+  margin: 30px 0 16px;
+  color: firebrick;
+}
+
+.about-content ul {
+  margin: 0 0 30px 22px;
+  color: #444;
+}
+
+.about-content li {
+  margin-bottom: 8px;
+}
+
+/* ---------------------------------------------------------------
+   CONTACT PAGE
+   --------------------------------------------------------------- */
+.contact-content {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: none;
+  border-color: firebrick;
+}
+
+#contact-form button {
+  padding: 12px;
+  background-color: firebrick;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#contact-form button:hover {
+  background-color: darkred;
+}
+
+.contact-info {
+  margin-top: 24px;
+  color: #666;
+}
+
+/* ---------------------------------------------------------------
+   FOOTER (same on every page)
+   --------------------------------------------------------------- */
+.site-footer {
+  background-color: #2d2d2d;
+  color: white;
+  text-align: center;
+  padding: 28px;
+  font-size: 0.9rem;
+}

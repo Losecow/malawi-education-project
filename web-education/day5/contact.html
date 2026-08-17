@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+  ================================================================
+  DAY 5 STARTER TEMPLATE — contact.html
+  ================================================================
+  Same header/nav/footer again, with "Contact" now marked active.
+  This page has a working form — try filling it out and clicking
+  Submit once you open this with Live Server.
+  ================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website | Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo">MY NAME</div>
+    <button id="menu-toggle">&#9776;</button>
+    <nav class="nav-menu" id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <section class="page-header">
+    <h1>Get in Touch</h1>
+  </section>
+
+  <section class="contact-content">
+    <p>Have a question or just want to say hi? Send a message below.</p>
+
+    <form id="contact-form">
+      <input type="text" placeholder="Your name" required>
+      <input type="email" placeholder="Your email" required>
+      <textarea placeholder="Your message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p class="contact-info">Or email me directly: your-email@example.com</p>
+  </section>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 My Website. Built during PAF/CGF Website Basics week.</p>
+  </footer>
+
+  <button id="top-btn">&uarr; Top</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
